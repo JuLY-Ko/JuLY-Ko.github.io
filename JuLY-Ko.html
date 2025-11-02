@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>July Park — Portfolio</title>
+  <meta name="description" content="The personal portfolio of July Park: projects, experience, and contact." />
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <style>
+    :root{
+      --bg: #ffffff; 
+      --text: #0b0b0b;
+      --muted: #6b7280; /* gray-500 */
+      --card: #f9fafb;  /* gray-50 */
+      --border: #e5e7eb; /* gray-200 */
+      --accent: #111827; /* gray-900 */
+      --link: #111827;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 20px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b0b0b; 
+        --text: #f5f5f5;
+        --muted: #9ca3af;
+        --card: #111213; 
+        --border: #1f2937; 
+        --accent: #f5f5f5; 
+        --link: #e5e7eb; 
+        --shadow: 0 1px 2px rgba(0,0,0,.6), 0 6px 30px rgba(0,0,0,.35);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:980px; margin:0 auto; padding:0 20px}
+    .skip-link{position:absolute;left:-9999px;top:auto; width:1px;height:1px; overflow:hidden}
+    .skip-link:focus{position:fixed;left:16px;top:16px;width:auto;height:auto;background:var(--card);border:1px solid var(--border);padding:.6rem .8rem;border-radius:.5rem;z-index:1000}
+
+    /* Header */
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in lab, var(--bg) 80%, transparent);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between; height:64px}
+    .brand{font-weight:700; letter-spacing:.2px}
+    .brand span{opacity:.6; font-weight:600}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    nav a{padding:8px 10px; border-radius:8px}
+    nav a:focus, nav a:hover{background:var(--card)}
+
+    /* Hero */
+    .hero{padding:72px 0 40px}
+    .hero h1{font-size:clamp(28px, 5vw, 44px); line-height:1.15; margin:0}
+    .hero p{max-width:720px; color:var(--muted); font-size:1.05rem}
+    .actions{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--card); box-shadow:var(--shadow)}
+    .btn.primary{background:var(--accent); color:#fff; border-color:transparent}
+
+    /* Sections */
+    section{padding:56px 0}
+    .section-title{font-size:1.25rem; font-weight:700; margin:0 0 16px 0}
+    .muted{color:var(--muted)}
+
+    /* Cards */
+    .grid{display:grid; grid-template-columns:repeat(12, 1fr); gap:16px}
+    .card{grid-column: span 12; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:4px 0 6px; font-size:1.05rem}
+    .card p{margin:0; color:var(--muted)}
+    .tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+    .tag{font-size:.78rem; padding:4px 8px; border:1px solid var(--border); border-radius:999px; background:transparent}
+
+    @media (min-width: 720px){
+      .card{grid-column: span 6}
+    }
+
+    /* Footer */
+    footer{padding:32px 0; border-top:1px solid var(--border); color:var(--muted)}
+
+    /* Utilities */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main navigation">
+      <div class="brand"><span>itsme</span>july</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container" tabindex="-1">
+    <section class="hero">
+      <h1>Hi, I’m July Park.</h1>
+      <p>Undergraduate CS student at East Carolina University focusing on cybersecurity, AI, and IoT. 
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects" aria-label="See my projects">View Projects</a>
+        <a class="btn" href="#contact" aria-label="Contact me">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About</h2>
+      <p class="muted">I’m a Computer Science student (Fall 2025 graduation) with interests in IoT security, AI for good, and human‑centered privacy. Currently building an IoT Cybersecurity Testbed and a lightweight social app, InstaLink. Previously a teaching assistant and research assistant.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>InstaLink — Privacy‑first social chat</h3>
+          <p>Lightweight desktop chat with end‑to‑end mindset, no data selling, and fast onboarding. Built with Python & Tkinter; server auth and messaging modules.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Security</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>IoT Cybersecurity Testbed</h3>
+          <p>Smart‑home device traffic capture and ML‑based anomaly detection in a controlled lab. Includes switch mirroring, taps, and labeled datasets.</p>
+          <div class="tags">
+            <span class="tag">IoT</span><span class="tag">Networking</span><span class="tag">ML</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>FML — Find‑My‑Library (Android)</h3>
+          <p>Location‑aware app migrated from Swift to Android Studio; modules for maps, friends, and events with GitLab CI.</p>
+          <div class="tags">
+            <span class="tag">Android</span><span class="tag">Kotlin</span><span class="tag">Maps</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <p class="muted">Open to internships, research collaborations, and neat side‑projects.</p>
+      <p>
+        <a class="btn" href="wjddusqkr19@gmail.com">Email me!</a>
+        <a class="btn" href="https://www.linkedin.com/in/july-park-a20614272/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/JuLY-Ko" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> July Park. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
